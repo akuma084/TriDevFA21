@@ -1,1 +1,2 @@
-# This project is the implementation of the SpotMe android application
+# SpotMe
+This project is the implementation of the SpotMe android application
