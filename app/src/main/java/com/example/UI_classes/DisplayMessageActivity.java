@@ -18,7 +18,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         // Get the Intent that started this activity and extract the string
         Intent search = getIntent();
-        String message = search.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String message = search.getStringExtra(Home.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView);
@@ -35,7 +35,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         Button home = findViewById(R.id.button8);
         home.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, Home.class);
             startActivity(intent);
         });
 

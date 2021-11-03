@@ -24,7 +24,7 @@ public class Feed extends AppCompatActivity {
 
         Button home = findViewById(R.id.button13);
         home.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, Home.class);
             startActivity(intent);
         });
 
