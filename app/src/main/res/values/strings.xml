@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="edit_message">...</string>
+    <string name="button_send">Search</string>
+    <string name="redirect_Feed">Feed</string>
+    <string name="user_profile">User Profile</string>
+    <string name="direct_messages">Dms</string>
+    <string name="homepage">Home</string>
+    <string name="notifications">Notifications</string>
+    <string name="messages">Messages</string>
+</resources>
