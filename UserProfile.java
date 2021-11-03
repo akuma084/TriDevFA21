@@ -8,6 +8,7 @@ class UserProfile {
   int userID;
   int[] friendsList;
   int end;
+  int capacity;
 
   public UserProfile() {
     userName = "";
@@ -18,6 +19,7 @@ class UserProfile {
     fitnessLevel = 0;
     userID = SetID();
     end = 0;
+    capacity = 0;
   }
 
   public String GetName() {
@@ -28,7 +30,7 @@ class UserProfile {
     return location;
   }
 
-  public String GetFitnessLevel() {
+  public int GetFitnessLevel() {
     return fitnessLevel;
   }
 
@@ -55,10 +57,10 @@ class UserProfile {
   public void SetEmail(String input) {
     email = input;
     // TODO update this to verify that a valid email is used
-    // Maybe use take the email used for Google Auth
+    // Maybe take the email used for Google Auth
   }
 
-  public void SetPhoneNumber(String Input) {
+  public void SetPhoneNumber(String input) {
     phoneNumber = input;
   }
 
@@ -88,27 +90,31 @@ class UserProfile {
     while(unique == false) {
       int ID = (int)Math.floor(Math.random() * (max - min + 1) + min);
       if(CheckUser(ID) == false) {
-        return = ID;
+        return ID;
       }
     }
+    return 0;
   }
 
   private boolean CheckUser(int ID){
     //TODO Check if an account exists with the passed ID
+    return true;
   }
 
   public void AddFriend(int ID) {
-    if(CheckUser(ID) {
-      if(end == fitnessLevel.length) {
+    if(CheckUser(ID)) {
+      if(end == capacity) {
         IncreaseSize();
       }
 
-      fitnessLevel[end] == ID;
+      friendsList[end] = ID;
       end++;
     }
     else {
       //print error message
     }
+    //Might have this function return a boolean
+    //Doing so will allow us to print the error message out in main onto screen
   }
 
   public void RemoveFriend(int ID) {
@@ -132,17 +138,19 @@ class UserProfile {
 
   private void IncreaseSize() {
     if(friendsList.length == 0) {
-        int[1] newList;
+        int[] newList = {0};
+        capacity = 1;
     }
     else {
       int newSize = friendsList.length * 2;
-      int[newSize] newList;
+      int[] newList = new int[newSize];
+      capacity = newSize;
 
       for(int i = 0; i < friendsList.length; i++) {
         newList[i] = friendsList[1];
       }
-    }
 
-    friendsList = newList;
+      friendsList = newList;
+    }
   }
 }
